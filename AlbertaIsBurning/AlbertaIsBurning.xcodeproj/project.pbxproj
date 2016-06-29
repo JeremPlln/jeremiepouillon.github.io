@@ -1,0 +1,653 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C90F73DF1D12320E00A2A44B /* fumeeEst.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C90F73DE1D12320E00A2A44B /* fumeeEst.atlas */; };
+		C90F73E11D12322000A2A44B /* fumeeNord.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C90F73E01D12322000A2A44B /* fumeeNord.atlas */; };
+		C90F73E31D12322800A2A44B /* fumeeNordEst.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C90F73E21D12322800A2A44B /* fumeeNordEst.atlas */; };
+		C90F73E51D12323000A2A44B /* fumeeNordOuest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C90F73E41D12323000A2A44B /* fumeeNordOuest.atlas */; };
+		C90F73E71D12323700A2A44B /* fumeeOuest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C90F73E61D12323700A2A44B /* fumeeOuest.atlas */; };
+		C90F73E91D12323E00A2A44B /* fumeeSud.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C90F73E81D12323E00A2A44B /* fumeeSud.atlas */; };
+		C90F73EB1D12324400A2A44B /* fumeeSudEst.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C90F73EA1D12324400A2A44B /* fumeeSudEst.atlas */; };
+		C90F73ED1D12324C00A2A44B /* fumeeSudOuest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C90F73EC1D12324C00A2A44B /* fumeeSudOuest.atlas */; };
+		C90F73F11D1337EE00A2A44B /* camionpompier.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C90F73EE1D1337EE00A2A44B /* camionpompier.mp3 */; };
+		C90F73F21D1337EE00A2A44B /* canadaire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C90F73EF1D1337EE00A2A44B /* canadaire.mp3 */; };
+		C90F73F31D1337EE00A2A44B /* eclair.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C90F73F01D1337EE00A2A44B /* eclair.mp3 */; };
+		C90F73F91D13BB6C00A2A44B /* 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C90F73F61D13BB6C00A2A44B /* 1.mp3 */; };
+		C90F73FA1D13BB6C00A2A44B /* 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C90F73F71D13BB6C00A2A44B /* 2.mp3 */; };
+		C90F73FB1D13BB6C00A2A44B /* 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C90F73F81D13BB6C00A2A44B /* 3.mp3 */; };
+		C93539731CEC31D900A56640 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93539721CEC31D900A56640 /* AppDelegate.swift */; };
+		C93539751CEC31D900A56640 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C93539741CEC31D900A56640 /* GameScene.sks */; };
+		C93539771CEC31D900A56640 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93539761CEC31D900A56640 /* GameScene.swift */; };
+		C93539791CEC31D900A56640 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93539781CEC31D900A56640 /* GameViewController.swift */; };
+		C935397C1CEC31D900A56640 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C935397A1CEC31D900A56640 /* Main.storyboard */; };
+		C935397E1CEC31D900A56640 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C935397D1CEC31D900A56640 /* Assets.xcassets */; };
+		C93539811CEC31D900A56640 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C935397F1CEC31D900A56640 /* LaunchScreen.storyboard */; };
+		C935398C1CEC31D900A56640 /* AlbertaIsBurningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C935398B1CEC31D900A56640 /* AlbertaIsBurningTests.swift */; };
+		C93539971CEC31D900A56640 /* AlbertaIsBurningUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93539961CEC31D900A56640 /* AlbertaIsBurningUITests.swift */; };
+		C93539A51CEC320600A56640 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93539A41CEC320600A56640 /* Constants.swift */; };
+		C93539A71CEC321300A56640 /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C93539A61CEC321300A56640 /* sprites.atlas */; };
+		C93539AB1CEE34D000A56640 /* Coordonnees.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93539AA1CEE34D000A56640 /* Coordonnees.swift */; };
+		C96903B81CF4E53600F6616D /* ALRadialMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96903B71CF4E53600F6616D /* ALRadialMenu.swift */; };
+		C96903BA1CF4E54800F6616D /* ALRadialMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96903B91CF4E54800F6616D /* ALRadialMenuButton.swift */; };
+		C99081981D09D2B4007379EB /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99081971D09D2B4007379EB /* MenuScene.swift */; };
+		C990819A1D09EC70007379EB /* LevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99081991D09EC70007379EB /* LevelScene.swift */; };
+		C990819C1D09F22E007379EB /* ScoreScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C990819B1D09F22E007379EB /* ScoreScene.swift */; };
+		C990819E1D0AF2A4007379EB /* TutorialScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C990819D1D0AF2A4007379EB /* TutorialScene.swift */; };
+		C99081A01D0B036F007379EB /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C990819F1D0B036F007379EB /* GameOverScene.swift */; };
+		C99081A21D0B037C007379EB /* WinnerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99081A11D0B037C007379EB /* WinnerScene.swift */; };
+		C99081C51D0E2AD7007379EB /* Case.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99081C41D0E2AD7007379EB /* Case.swift */; };
+		C99081C71D0E2CDA007379EB /* PlateauDeJeu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99081C61D0E2CDA007379EB /* PlateauDeJeu.swift */; };
+		C99081C91D0EE8BB007379EB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99081C81D0EE8BB007379EB /* Social.framework */; };
+		C99081CB1D10E845007379EB /* fire.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C99081CA1D10E845007379EB /* fire.atlas */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C93539881CEC31D900A56640 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C93539671CEC31D900A56640 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C935396E1CEC31D900A56640;
+			remoteInfo = AlbertaIsBurning;
+		};
+		C93539931CEC31D900A56640 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C93539671CEC31D900A56640 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C935396E1CEC31D900A56640;
+			remoteInfo = AlbertaIsBurning;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C90F73DE1D12320E00A2A44B /* fumeeEst.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = fumeeEst.atlas; sourceTree = "<group>"; };
+		C90F73E01D12322000A2A44B /* fumeeNord.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = fumeeNord.atlas; sourceTree = "<group>"; };
+		C90F73E21D12322800A2A44B /* fumeeNordEst.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = fumeeNordEst.atlas; sourceTree = "<group>"; };
+		C90F73E41D12323000A2A44B /* fumeeNordOuest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = fumeeNordOuest.atlas; sourceTree = "<group>"; };
+		C90F73E61D12323700A2A44B /* fumeeOuest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = fumeeOuest.atlas; sourceTree = "<group>"; };
+		C90F73E81D12323E00A2A44B /* fumeeSud.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = fumeeSud.atlas; sourceTree = "<group>"; };
+		C90F73EA1D12324400A2A44B /* fumeeSudEst.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = fumeeSudEst.atlas; sourceTree = "<group>"; };
+		C90F73EC1D12324C00A2A44B /* fumeeSudOuest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = fumeeSudOuest.atlas; sourceTree = "<group>"; };
+		C90F73EE1D1337EE00A2A44B /* camionpompier.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = camionpompier.mp3; sourceTree = "<group>"; };
+		C90F73EF1D1337EE00A2A44B /* canadaire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = canadaire.mp3; sourceTree = "<group>"; };
+		C90F73F01D1337EE00A2A44B /* eclair.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = eclair.mp3; sourceTree = "<group>"; };
+		C90F73F61D13BB6C00A2A44B /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1.mp3; sourceTree = "<group>"; };
+		C90F73F71D13BB6C00A2A44B /* 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 2.mp3; sourceTree = "<group>"; };
+		C90F73F81D13BB6C00A2A44B /* 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 3.mp3; sourceTree = "<group>"; };
+		C935396F1CEC31D900A56640 /* AlbertaIsBurning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlbertaIsBurning.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C93539721CEC31D900A56640 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C93539741CEC31D900A56640 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		C93539761CEC31D900A56640 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		C93539781CEC31D900A56640 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		C935397B1CEC31D900A56640 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C935397D1CEC31D900A56640 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C93539801CEC31D900A56640 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C93539821CEC31D900A56640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C93539871CEC31D900A56640 /* AlbertaIsBurningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlbertaIsBurningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C935398B1CEC31D900A56640 /* AlbertaIsBurningTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbertaIsBurningTests.swift; sourceTree = "<group>"; };
+		C935398D1CEC31D900A56640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C93539921CEC31D900A56640 /* AlbertaIsBurningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlbertaIsBurningUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C93539961CEC31D900A56640 /* AlbertaIsBurningUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbertaIsBurningUITests.swift; sourceTree = "<group>"; };
+		C93539981CEC31D900A56640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C93539A41CEC320600A56640 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C93539A61CEC321300A56640 /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
+		C93539AA1CEE34D000A56640 /* Coordonnees.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordonnees.swift; sourceTree = "<group>"; };
+		C96903B71CF4E53600F6616D /* ALRadialMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALRadialMenu.swift; sourceTree = "<group>"; };
+		C96903B91CF4E54800F6616D /* ALRadialMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALRadialMenuButton.swift; sourceTree = "<group>"; };
+		C99081971D09D2B4007379EB /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		C99081991D09EC70007379EB /* LevelScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelScene.swift; sourceTree = "<group>"; };
+		C990819B1D09F22E007379EB /* ScoreScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreScene.swift; sourceTree = "<group>"; };
+		C990819D1D0AF2A4007379EB /* TutorialScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialScene.swift; sourceTree = "<group>"; };
+		C990819F1D0B036F007379EB /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		C99081A11D0B037C007379EB /* WinnerScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinnerScene.swift; sourceTree = "<group>"; };
+		C99081C41D0E2AD7007379EB /* Case.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Case.swift; sourceTree = "<group>"; };
+		C99081C61D0E2CDA007379EB /* PlateauDeJeu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlateauDeJeu.swift; sourceTree = "<group>"; };
+		C99081C81D0EE8BB007379EB /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		C99081CA1D10E845007379EB /* fire.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = fire.atlas; path = ../../fire.atlas; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C935396C1CEC31D900A56640 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C99081C91D0EE8BB007379EB /* Social.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C93539841CEC31D900A56640 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C935398F1CEC31D900A56640 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C93539661CEC31D900A56640 = {
+			isa = PBXGroup;
+			children = (
+				C99081C81D0EE8BB007379EB /* Social.framework */,
+				C93539711CEC31D900A56640 /* AlbertaIsBurning */,
+				C935398A1CEC31D900A56640 /* AlbertaIsBurningTests */,
+				C93539951CEC31D900A56640 /* AlbertaIsBurningUITests */,
+				C93539701CEC31D900A56640 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C93539701CEC31D900A56640 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C935396F1CEC31D900A56640 /* AlbertaIsBurning.app */,
+				C93539871CEC31D900A56640 /* AlbertaIsBurningTests.xctest */,
+				C93539921CEC31D900A56640 /* AlbertaIsBurningUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C93539711CEC31D900A56640 /* AlbertaIsBurning */ = {
+			isa = PBXGroup;
+			children = (
+				C90F73F61D13BB6C00A2A44B /* 1.mp3 */,
+				C90F73F71D13BB6C00A2A44B /* 2.mp3 */,
+				C90F73F81D13BB6C00A2A44B /* 3.mp3 */,
+				C90F73EE1D1337EE00A2A44B /* camionpompier.mp3 */,
+				C90F73EF1D1337EE00A2A44B /* canadaire.mp3 */,
+				C90F73F01D1337EE00A2A44B /* eclair.mp3 */,
+				C90F73EC1D12324C00A2A44B /* fumeeSudOuest.atlas */,
+				C90F73EA1D12324400A2A44B /* fumeeSudEst.atlas */,
+				C90F73E81D12323E00A2A44B /* fumeeSud.atlas */,
+				C90F73E61D12323700A2A44B /* fumeeOuest.atlas */,
+				C90F73E41D12323000A2A44B /* fumeeNordOuest.atlas */,
+				C90F73E21D12322800A2A44B /* fumeeNordEst.atlas */,
+				C90F73E01D12322000A2A44B /* fumeeNord.atlas */,
+				C90F73DE1D12320E00A2A44B /* fumeeEst.atlas */,
+				C99081CA1D10E845007379EB /* fire.atlas */,
+				C93539A61CEC321300A56640 /* sprites.atlas */,
+				C93539721CEC31D900A56640 /* AppDelegate.swift */,
+				C93539741CEC31D900A56640 /* GameScene.sks */,
+				C93539761CEC31D900A56640 /* GameScene.swift */,
+				C99081C61D0E2CDA007379EB /* PlateauDeJeu.swift */,
+				C99081C41D0E2AD7007379EB /* Case.swift */,
+				C93539781CEC31D900A56640 /* GameViewController.swift */,
+				C93539A41CEC320600A56640 /* Constants.swift */,
+				C93539AA1CEE34D000A56640 /* Coordonnees.swift */,
+				C96903BB1CF4E54D00F6616D /* ALRadialMenu */,
+				C99081A31D0C6F88007379EB /* Scenes */,
+				C935397A1CEC31D900A56640 /* Main.storyboard */,
+				C935397D1CEC31D900A56640 /* Assets.xcassets */,
+				C935397F1CEC31D900A56640 /* LaunchScreen.storyboard */,
+				C93539821CEC31D900A56640 /* Info.plist */,
+			);
+			path = AlbertaIsBurning;
+			sourceTree = "<group>";
+		};
+		C935398A1CEC31D900A56640 /* AlbertaIsBurningTests */ = {
+			isa = PBXGroup;
+			children = (
+				C935398B1CEC31D900A56640 /* AlbertaIsBurningTests.swift */,
+				C935398D1CEC31D900A56640 /* Info.plist */,
+			);
+			path = AlbertaIsBurningTests;
+			sourceTree = "<group>";
+		};
+		C93539951CEC31D900A56640 /* AlbertaIsBurningUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C93539961CEC31D900A56640 /* AlbertaIsBurningUITests.swift */,
+				C93539981CEC31D900A56640 /* Info.plist */,
+			);
+			path = AlbertaIsBurningUITests;
+			sourceTree = "<group>";
+		};
+		C96903BB1CF4E54D00F6616D /* ALRadialMenu */ = {
+			isa = PBXGroup;
+			children = (
+				C96903B71CF4E53600F6616D /* ALRadialMenu.swift */,
+				C96903B91CF4E54800F6616D /* ALRadialMenuButton.swift */,
+			);
+			name = ALRadialMenu;
+			sourceTree = "<group>";
+		};
+		C99081A31D0C6F88007379EB /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				C990819D1D0AF2A4007379EB /* TutorialScene.swift */,
+				C99081971D09D2B4007379EB /* MenuScene.swift */,
+				C990819B1D09F22E007379EB /* ScoreScene.swift */,
+				C990819F1D0B036F007379EB /* GameOverScene.swift */,
+				C99081A11D0B037C007379EB /* WinnerScene.swift */,
+				C99081991D09EC70007379EB /* LevelScene.swift */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C935396E1CEC31D900A56640 /* AlbertaIsBurning */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C935399B1CEC31D900A56640 /* Build configuration list for PBXNativeTarget "AlbertaIsBurning" */;
+			buildPhases = (
+				C935396B1CEC31D900A56640 /* Sources */,
+				C935396C1CEC31D900A56640 /* Frameworks */,
+				C935396D1CEC31D900A56640 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlbertaIsBurning;
+			productName = AlbertaIsBurning;
+			productReference = C935396F1CEC31D900A56640 /* AlbertaIsBurning.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C93539861CEC31D900A56640 /* AlbertaIsBurningTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C935399E1CEC31D900A56640 /* Build configuration list for PBXNativeTarget "AlbertaIsBurningTests" */;
+			buildPhases = (
+				C93539831CEC31D900A56640 /* Sources */,
+				C93539841CEC31D900A56640 /* Frameworks */,
+				C93539851CEC31D900A56640 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C93539891CEC31D900A56640 /* PBXTargetDependency */,
+			);
+			name = AlbertaIsBurningTests;
+			productName = AlbertaIsBurningTests;
+			productReference = C93539871CEC31D900A56640 /* AlbertaIsBurningTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C93539911CEC31D900A56640 /* AlbertaIsBurningUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C93539A11CEC31D900A56640 /* Build configuration list for PBXNativeTarget "AlbertaIsBurningUITests" */;
+			buildPhases = (
+				C935398E1CEC31D900A56640 /* Sources */,
+				C935398F1CEC31D900A56640 /* Frameworks */,
+				C93539901CEC31D900A56640 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C93539941CEC31D900A56640 /* PBXTargetDependency */,
+			);
+			name = AlbertaIsBurningUITests;
+			productName = AlbertaIsBurningUITests;
+			productReference = C93539921CEC31D900A56640 /* AlbertaIsBurningUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C93539671CEC31D900A56640 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Pouillon Jérémie";
+				TargetAttributes = {
+					C935396E1CEC31D900A56640 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = MQVZCJ9B9X;
+					};
+					C93539861CEC31D900A56640 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = MQVZCJ9B9X;
+						TestTargetID = C935396E1CEC31D900A56640;
+					};
+					C93539911CEC31D900A56640 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = MQVZCJ9B9X;
+						TestTargetID = C935396E1CEC31D900A56640;
+					};
+				};
+			};
+			buildConfigurationList = C935396A1CEC31D900A56640 /* Build configuration list for PBXProject "AlbertaIsBurning" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C93539661CEC31D900A56640;
+			productRefGroup = C93539701CEC31D900A56640 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C935396E1CEC31D900A56640 /* AlbertaIsBurning */,
+				C93539861CEC31D900A56640 /* AlbertaIsBurningTests */,
+				C93539911CEC31D900A56640 /* AlbertaIsBurningUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C935396D1CEC31D900A56640 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C90F73F91D13BB6C00A2A44B /* 1.mp3 in Resources */,
+				C93539A71CEC321300A56640 /* sprites.atlas in Resources */,
+				C93539751CEC31D900A56640 /* GameScene.sks in Resources */,
+				C90F73ED1D12324C00A2A44B /* fumeeSudOuest.atlas in Resources */,
+				C90F73FA1D13BB6C00A2A44B /* 2.mp3 in Resources */,
+				C90F73F21D1337EE00A2A44B /* canadaire.mp3 in Resources */,
+				C90F73E51D12323000A2A44B /* fumeeNordOuest.atlas in Resources */,
+				C93539811CEC31D900A56640 /* LaunchScreen.storyboard in Resources */,
+				C90F73E31D12322800A2A44B /* fumeeNordEst.atlas in Resources */,
+				C90F73EB1D12324400A2A44B /* fumeeSudEst.atlas in Resources */,
+				C90F73FB1D13BB6C00A2A44B /* 3.mp3 in Resources */,
+				C90F73DF1D12320E00A2A44B /* fumeeEst.atlas in Resources */,
+				C99081CB1D10E845007379EB /* fire.atlas in Resources */,
+				C935397E1CEC31D900A56640 /* Assets.xcassets in Resources */,
+				C90F73F31D1337EE00A2A44B /* eclair.mp3 in Resources */,
+				C935397C1CEC31D900A56640 /* Main.storyboard in Resources */,
+				C90F73F11D1337EE00A2A44B /* camionpompier.mp3 in Resources */,
+				C90F73E71D12323700A2A44B /* fumeeOuest.atlas in Resources */,
+				C90F73E11D12322000A2A44B /* fumeeNord.atlas in Resources */,
+				C90F73E91D12323E00A2A44B /* fumeeSud.atlas in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C93539851CEC31D900A56640 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C93539901CEC31D900A56640 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C935396B1CEC31D900A56640 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C93539771CEC31D900A56640 /* GameScene.swift in Sources */,
+				C93539791CEC31D900A56640 /* GameViewController.swift in Sources */,
+				C96903BA1CF4E54800F6616D /* ALRadialMenuButton.swift in Sources */,
+				C990819E1D0AF2A4007379EB /* TutorialScene.swift in Sources */,
+				C96903B81CF4E53600F6616D /* ALRadialMenu.swift in Sources */,
+				C99081C51D0E2AD7007379EB /* Case.swift in Sources */,
+				C99081A21D0B037C007379EB /* WinnerScene.swift in Sources */,
+				C93539731CEC31D900A56640 /* AppDelegate.swift in Sources */,
+				C99081981D09D2B4007379EB /* MenuScene.swift in Sources */,
+				C990819A1D09EC70007379EB /* LevelScene.swift in Sources */,
+				C99081C71D0E2CDA007379EB /* PlateauDeJeu.swift in Sources */,
+				C93539A51CEC320600A56640 /* Constants.swift in Sources */,
+				C93539AB1CEE34D000A56640 /* Coordonnees.swift in Sources */,
+				C99081A01D0B036F007379EB /* GameOverScene.swift in Sources */,
+				C990819C1D09F22E007379EB /* ScoreScene.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C93539831CEC31D900A56640 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C935398C1CEC31D900A56640 /* AlbertaIsBurningTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C935398E1CEC31D900A56640 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C93539971CEC31D900A56640 /* AlbertaIsBurningUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C93539891CEC31D900A56640 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C935396E1CEC31D900A56640 /* AlbertaIsBurning */;
+			targetProxy = C93539881CEC31D900A56640 /* PBXContainerItemProxy */;
+		};
+		C93539941CEC31D900A56640 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C935396E1CEC31D900A56640 /* AlbertaIsBurning */;
+			targetProxy = C93539931CEC31D900A56640 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C935397A1CEC31D900A56640 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C935397B1CEC31D900A56640 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C935397F1CEC31D900A56640 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C93539801CEC31D900A56640 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C93539991CEC31D900A56640 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C935399A1CEC31D900A56640 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C935399C1CEC31D900A56640 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AlbertaIsBurning/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GribouilleStudio.AlbertaIsBurning;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C935399D1CEC31D900A56640 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AlbertaIsBurning/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GribouilleStudio.AlbertaIsBurning;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C935399F1CEC31D900A56640 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = AlbertaIsBurningTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GribouilleStudio.AlbertaIsBurningTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlbertaIsBurning.app/AlbertaIsBurning";
+			};
+			name = Debug;
+		};
+		C93539A01CEC31D900A56640 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AlbertaIsBurningTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GribouilleStudio.AlbertaIsBurningTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlbertaIsBurning.app/AlbertaIsBurning";
+			};
+			name = Release;
+		};
+		C93539A21CEC31D900A56640 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = AlbertaIsBurningUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GribouilleStudio.AlbertaIsBurningUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AlbertaIsBurning;
+			};
+			name = Debug;
+		};
+		C93539A31CEC31D900A56640 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AlbertaIsBurningUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GribouilleStudio.AlbertaIsBurningUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AlbertaIsBurning;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C935396A1CEC31D900A56640 /* Build configuration list for PBXProject "AlbertaIsBurning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C93539991CEC31D900A56640 /* Debug */,
+				C935399A1CEC31D900A56640 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C935399B1CEC31D900A56640 /* Build configuration list for PBXNativeTarget "AlbertaIsBurning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C935399C1CEC31D900A56640 /* Debug */,
+				C935399D1CEC31D900A56640 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C935399E1CEC31D900A56640 /* Build configuration list for PBXNativeTarget "AlbertaIsBurningTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C935399F1CEC31D900A56640 /* Debug */,
+				C93539A01CEC31D900A56640 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C93539A11CEC31D900A56640 /* Build configuration list for PBXNativeTarget "AlbertaIsBurningUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C93539A21CEC31D900A56640 /* Debug */,
+				C93539A31CEC31D900A56640 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C93539671CEC31D900A56640 /* Project object */;
+}
