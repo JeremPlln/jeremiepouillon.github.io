@@ -5,7 +5,6 @@
 //  Created by Pouillon Jérémie on 10/06/2016.
 //  Copyright © 2016 Pouillon Jérémie. All rights reserved.
 //
-
 import Foundation
 import SpriteKit
 import Social
@@ -21,10 +20,9 @@ class WinnerScene: SKScene{
     let scoreRetardantLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 30))
     let scoreTotalLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 30))
     let partageScore = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 30))
-
+    var views = [UIView]()
     
     override func didMoveToView(view: SKView) {
-        
         let background = SKSpriteNode(imageNamed: "winnerBackground.png")
         background.size.width = self.view!.bounds.width
         background.size.height = self.view!.bounds.height
@@ -39,122 +37,65 @@ class WinnerScene: SKScene{
         let location = touch.first!.locationInNode(self)
         let node = self.nodeAtPoint(location)
         
-        // If next button is touched, start transition to second scene
+        let scene = MenuScene(size: self.size)
         
-        let secondScene = MenuScene(size: self.size)
-        
-        switch node.name {
-        case "BoutonFacebook"? :
-            NSNotificationCenter.defaultCenter().postNotificationName("test", object: nil)
-
-            //secondScene = GameScene(size: self.size, typeJeu: 1)
-            //        case "BoutonTwitter"? :
-        //secondScene = GameScene(size: self.size, typeJeu: 2)
-        case "goToMenuScene"? :
+        if node.name == "goToMenuScene" {
             removeEverythingFromView()
-            let transition = SKTransition.flipVerticalWithDuration(1.0)
-            secondScene.scaleMode = SKSceneScaleMode.AspectFill
-            self.scene!.view!.presentScene(secondScene, transition: transition)
-        default:
-            break
+            let duration = 1.0
+            let transition = SKTransition.fadeWithDuration(duration)
+            scene.scaleMode = SKSceneScaleMode.AspectFill
+            self.scene!.view!.presentScene(scene, transition: transition)
+        }
+        else {
+            NSNotificationCenter.defaultCenter().postNotificationName("test", object: nil)
         }
     }
     
     private func addLabel(){
-        labelTitre.center.x = (view?.center.x)!
-        labelTitre.center.y = (view?.center.y)! - (view?.bounds.height)!/2.2
-        labelTitre.textAlignment = NSTextAlignment.Center
-        labelTitre.text = "PARTIE GAGNEE!"
-        labelTitre.textColor = UIColor.whiteColor()
-        self.view?.addSubview(labelTitre)
         
-        labelPhrase.center.x = (view?.center.x)!
-        labelPhrase.center.y = (view?.center.y)! - (view?.bounds.height)!/2.8
-        labelPhrase.textAlignment = NSTextAlignment.Center
-        labelPhrase.text = "Vous avez maitrisé l'incendie, tout les habitants ont pû être évacués !"
-        labelPhrase.adjustsFontSizeToFitWidth = true
-        labelPhrase.textColor = UIColor.whiteColor()
-        self.view?.addSubview(labelPhrase)
-        
-        scoreVieLabel.center.x = (view?.center.x)! + 40
-        scoreVieLabel.center.y = (view?.center.y)! - (view?.bounds.height)!/4.5
-        scoreVieLabel.text = String(format: "Nombre de vies sauvées : \(scoreVie)")
-        scoreVieLabel.textColor = UIColor.whiteColor()
-        self.view?.addSubview(scoreVieLabel)
-        
-        scorePompierLabel.center.x = (view?.center.x)! + 40
-        scorePompierLabel.center.y = (view?.center.y)! - (view?.bounds.height)!/7
-        scorePompierLabel.text = String(format: "Pompiers sollicités : \(scorePompier)")
-        labelPhrase.adjustsFontSizeToFitWidth = true
-        scorePompierLabel.textColor = UIColor.whiteColor()
-        self.view?.addSubview(scorePompierLabel)
-        
-        scoreCanadaireLabel.center.x = (view?.center.x)! + 40
-        scoreCanadaireLabel.center.y = (view?.center.y)! - (view?.bounds.height)!/14
-        scoreCanadaireLabel.text = String(format: "Canadaires utilisées : \(scoreCanadaire)")
-        labelPhrase.adjustsFontSizeToFitWidth = true
-        scoreCanadaireLabel.textColor = UIColor.whiteColor()
-        self.view?.addSubview(scoreCanadaireLabel)
-        
-        scoreRetardantLabel.center.x = (view?.center.x)! + 40
-        scoreRetardantLabel.center.y = (view?.center.y)!
-        scoreRetardantLabel.text = String(format: "Retardants utilisés : \(scoreRetardant)")
-        labelPhrase.adjustsFontSizeToFitWidth = true
-        scoreRetardantLabel.textColor = UIColor.whiteColor()
-        self.view?.addSubview(scoreRetardantLabel)
-        
-        scoreTotalLabel.center.x = (view?.center.x)! + 110
-        scoreTotalLabel.center.y = (view?.center.y)! + (view?.bounds.height)!/6
-        scoreTotalLabel.text = String(format: "Total : \(scoreTotal)")
-        labelPhrase.adjustsFontSizeToFitWidth = true
-        scoreTotalLabel.textColor = UIColor.whiteColor()
-        self.view?.addSubview(scoreTotalLabel)
-        
-        partageScore.center.x = (view?.center.x)!+30
-        partageScore.center.y = (view?.center.y)! + (view?.bounds.height)!/3.5
-        partageScore.text = String(format: "Partage ton score : ")
-        partageScore.adjustsFontSizeToFitWidth = true
-        partageScore.textColor = UIColor.whiteColor()
-        self.view?.addSubview(partageScore)
+        func Label(label: UILabel, text: String, offsetX: CGFloat, offsetY: CGFloat, alignment: Bool = true, adjustFont: Bool = true){
+            label.center.x = (view?.center.x)! + offsetX
+            label.center.y = (view?.center.y)! + offsetY
+            if alignment {label.textAlignment = NSTextAlignment.Center}
+            if adjustFont {label.adjustsFontSizeToFitWidth = true}
+            label.text = text
+            label.textColor = UIColor.whiteColor()
+            views.append(label)
+            for view in views {
+                self.view?.addSubview(view)
+            }
+        }
+        Label(labelTitre, text: "PARTIE GAGNEE!", offsetX: 0.0, offsetY: -(view?.bounds.height)!/2.2, alignment: true, adjustFont: false)
+        Label(labelPhrase, text: "Vous avez maitrisé l'incendie, tout les habitants ont pû être évacués !", offsetX: 0.0, offsetY: -(view?.bounds.height)!/2.8, alignment: true, adjustFont: true)
+        Label(scoreVieLabel, text: String(format: "Nombre de vies sauvées : \(scoreVie)"), offsetX: 40.0, offsetY: -(view?.bounds.height)!/4.5, alignment: false)
+        Label(scorePompierLabel, text: String(format: "Pompiers sollicités : \(scorePompier)"), offsetX: 40.0, offsetY: -(view?.bounds.height)!/7, alignment: false)
+        Label(scoreCanadaireLabel, text: String(format: "Canadaires utilisés : \(scoreCanadaire)"), offsetX: 40.0, offsetY: -(view?.bounds.height)!/14, alignment: false)
+        Label(scoreRetardantLabel, text: String(format: "Retardants utilisés : \(scoreRetardant)"), offsetX: 40.0, offsetY: 0.0, alignment: false)
+        Label(scoreTotalLabel, text: String(format: "Total : \(scoreTotal)"), offsetX: 110.0, offsetY: (view?.bounds.height)!/6, alignment: false)
+        Label(partageScore, text: String(format: "Partage ton score : "), offsetX: 30.0, offsetY: (view?.bounds.height)!/3.5, alignment: false)
     }
     
     private func addButtons() {
         // TODO layout buttons here
-        let facebookButton = SKSpriteNode(imageNamed: "facebook.png")
-        facebookButton.position = CGPointMake(CGRectGetMidX(self.frame)+50, CGRectGetMidY(self.frame) - (view?.bounds.height)!/3.5)
-        facebookButton.size = CGSize(width: 32, height: 32)
-        facebookButton.name = "BoutonFacebook"
-        facebookButton.zPosition = 2
-        self.addChild(facebookButton)
-        
-        let twitterButton = SKSpriteNode(imageNamed: "twitter.png")
-        twitterButton.position = CGPointMake(CGRectGetMidX(self.frame)+90, CGRectGetMidY(self.frame) - (view?.bounds.height)!/3.5)
-        twitterButton.size = CGSize(width: 32, height: 32)
-        twitterButton.name = "BoutonTwitter"
-        twitterButton.zPosition = 2
-        self.addChild(twitterButton)
-        
-        let menuButton = SKSpriteNode(imageNamed: "ButtonMenuPrincipal")
-        menuButton.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) - (view?.bounds.height)!/2.4)
-        menuButton.name = "goToMenuScene"
-        menuButton.zPosition = 2
-        menuButton.size = CGSize(width: 75, height: 45)
-        self.addChild(menuButton)
+        func button(nameFile: String, nameNode: String?, offsetX: CGFloat, offsetY: CGFloat, size: Bool = false) {
+            let button = SKSpriteNode(imageNamed: nameFile)
+            button.position = CGPointMake(CGRectGetMidX(self.frame)+offsetX, CGRectGetMidY(self.frame) + offsetY)
+            button.size = CGSize(width: 32, height: 32)
+            if size {button.size = CGSize(width: 75, height: 45)}
+            button.name = nameNode
+            button.zPosition = 2
+            self.addChild(button)
+            
+        }
+        button("facebook.png", nameNode: "BoutonFacebook", offsetX: 50.0, offsetY: -(view?.bounds.height)!/3.5)
+        button("twitter.png", nameNode: "BoutonTwitter", offsetX: 90.0, offsetY: -(view?.bounds.height)!/3.5)
+        button("ButtonMenuPrincipal", nameNode: "goToMenuScene", offsetX: 0.0, offsetY: -(view?.bounds.height)!/2.4, size: true)
     }
     
     private func removeEverythingFromView(){
-        labelTitre.removeFromSuperview()
-        labelPhrase.removeFromSuperview()
-        partageScore.removeFromSuperview()
-        scoreTotalLabel.removeFromSuperview()
-        scoreVieLabel.removeFromSuperview()
-        scoreRetardantLabel.removeFromSuperview()
-        scoreCanadaireLabel.removeFromSuperview()
-        scorePompierLabel.removeFromSuperview()
+        for view in views {
+            view.removeFromSuperview()
+        }
+        views.removeAll()
     }
-
-    private func shareTwitter(){
-        
-    }
-    
 }

@@ -18,10 +18,9 @@ class GameOverScene: SKScene{
     let scoreCanadaireLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 30))
     let scoreRetardantLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 30))
     let scoreTotalLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 30))
-
+    var views = [UIView]()
     
     override func didMoveToView(view: SKView) {
-        
         let background = SKSpriteNode(imageNamed: "gameOver.png")
         background.size.width = self.view!.bounds.width
         background.size.height = self.view!.bounds.height
@@ -36,82 +35,48 @@ class GameOverScene: SKScene{
         let touch = touches
         let location = touch.first!.locationInNode(self)
         let node = self.nodeAtPoint(location)
-        
-        // If next button is touched, start transition to second scene
+
         if (node.name == "BackToMenu") {
             removeEverythingFromView()
-            let secondScene = MenuScene(size: self.size)
-            let transition = SKTransition.flipVerticalWithDuration(1.0)
-            secondScene.scaleMode = SKSceneScaleMode.AspectFill
-            self.scene!.view?.presentScene(secondScene, transition: transition)
+            let scene = MenuScene(size: self.size)
+            let duration = 1.0
+            let transition = SKTransition.fadeWithDuration(duration)
+            scene.scaleMode = SKSceneScaleMode.AspectFill
+            self.scene!.view!.presentScene(scene, transition: transition)
         }
     }
     
     private func removeEverythingFromView(){
-        labelTitre.removeFromSuperview()
-        labelPhrase.removeFromSuperview()
-        scoreVieLabel.removeFromSuperview()
-        scoreTotalLabel.removeFromSuperview()
-        scoreCanadaireLabel.removeFromSuperview()
-        scoreRetardantLabel.removeFromSuperview()
-        labelPhrase.removeFromSuperview()
-        scorePompierLabel.removeFromSuperview()
+        for view in views {
+            view.removeFromSuperview()
+        }
+        views.removeAll()
     }
     
     private func addLabel(){
-        labelTitre.center.x = (view?.center.x)!
-        labelTitre.center.y = (view?.center.y)! - (view?.bounds.height)!/2.2
-        labelTitre.textAlignment = NSTextAlignment.Center
-        labelTitre.text = "FIN DE PARTIE!"
-        labelTitre.textColor = UIColor.whiteColor()
-        self.view?.addSubview(labelTitre)
         
-        labelPhrase.center.x = (view?.center.x)!
-        labelPhrase.center.y = (view?.center.y)! - (view?.bounds.height)!/2.8
-        labelPhrase.textAlignment = NSTextAlignment.Center
-        labelPhrase.text = "L'incendie a atteint la ville et a fait des victimes, vous avez failli à votre mission"
-        labelPhrase.adjustsFontSizeToFitWidth = true
-        labelPhrase.textColor = UIColor.whiteColor()
-        self.view?.addSubview(labelPhrase)
-        
-        scoreVieLabel.center.x = (view?.center.x)! + 40
-        scoreVieLabel.center.y = (view?.center.y)! - (view?.bounds.height)!/4.5
-        scoreVieLabel.text = String(format: "Nombre de vies sauvées : \(scoreVie)")
-        scoreVieLabel.textColor = UIColor.whiteColor()
-        self.view?.addSubview(scoreVieLabel)
-
-        scorePompierLabel.center.x = (view?.center.x)! + 40
-        scorePompierLabel.center.y = (view?.center.y)! - (view?.bounds.height)!/7
-        scorePompierLabel.text = String(format: "Pompiers sollicités : \(scorePompier)")
-        labelPhrase.adjustsFontSizeToFitWidth = true
-        scorePompierLabel.textColor = UIColor.whiteColor()
-        self.view?.addSubview(scorePompierLabel)
- 
-        scoreCanadaireLabel.center.x = (view?.center.x)! + 40
-        scoreCanadaireLabel.center.y = (view?.center.y)! - (view?.bounds.height)!/14
-        scoreCanadaireLabel.text = String(format: "Canadaires utilisées : \(scoreCanadaire)")
-        labelPhrase.adjustsFontSizeToFitWidth = true
-        scoreCanadaireLabel.textColor = UIColor.whiteColor()
-        self.view?.addSubview(scoreCanadaireLabel)
-
-        scoreRetardantLabel.center.x = (view?.center.x)! + 40
-        scoreRetardantLabel.center.y = (view?.center.y)!
-        scoreRetardantLabel.text = String(format: "Retardants utilisés : \(scoreRetardant)")
-        labelPhrase.adjustsFontSizeToFitWidth = true
-        scoreRetardantLabel.textColor = UIColor.whiteColor()
-        self.view?.addSubview(scoreRetardantLabel)
-
-        scoreTotalLabel.center.x = (view?.center.x)! + 110
-        scoreTotalLabel.center.y = (view?.center.y)! + (view?.bounds.height)!/6
-        scoreTotalLabel.text = String(format: "Total : \(scoreTotal)")
-        labelPhrase.adjustsFontSizeToFitWidth = true
-        scoreTotalLabel.textColor = UIColor.whiteColor()
-        self.view?.addSubview(scoreTotalLabel)
- 
+        func Label(label: UILabel, text: String, offsetX: CGFloat, offsetY: CGFloat, alignment: Bool = true, adjustFont: Bool = true){
+            label.center.x = (view?.center.x)! + offsetX
+            label.center.y = (view?.center.y)! + offsetY
+            if alignment {label.textAlignment = NSTextAlignment.Center}
+            if adjustFont {label.adjustsFontSizeToFitWidth = true}
+            label.text = text
+            label.textColor = UIColor.whiteColor()
+            views.append(label)
+            for view in views {
+                self.view?.addSubview(view)
+            }
+        }
+        Label(labelTitre, text: "FIN DE PARTIE!", offsetX: 0.0, offsetY: -(view?.bounds.height)!/2.2, alignment: true, adjustFont: false)
+        Label(labelPhrase, text: "L'incendie a atteint la ville et a fait des victimes, vous avez failli à votre mission", offsetX: 0.0, offsetY: -(view?.bounds.height)!/2.8, alignment: true, adjustFont: true)
+        Label(scoreVieLabel, text: String(format: "Nombre de vies sauvées : \(scoreVie)"), offsetX: 40.0, offsetY: -(view?.bounds.height)!/4.5, alignment: false)
+        Label(scorePompierLabel, text: String(format: "Pompiers sollicités : \(scorePompier)"), offsetX: 40.0, offsetY: -(view?.bounds.height)!/7, alignment: false)
+        Label(scoreCanadaireLabel, text: String(format: "Canadaires utilisés : \(scoreCanadaire)"), offsetX: 40.0, offsetY: -(view?.bounds.height)!/14, alignment: false)
+        Label(scoreRetardantLabel, text: String(format: "Retardants utilisés : \(scoreRetardant)"), offsetX: 40.0, offsetY: 0.0, alignment: false)
+        Label(scoreTotalLabel, text: String(format: "Total : \(scoreTotal)"), offsetX: 110.0, offsetY: (view?.bounds.height)!/6, alignment: false)
     }
 
     private func addButtons() {
-        // TODO layout buttons here
         let backToMenu = SKSpriteNode(imageNamed: "ButtonMenuPrincipal.png")
         backToMenu.position = CGPointMake((view?.center.x)!, (view?.center.y)! - (view?.bounds.height)!/3)
         backToMenu.name = "BackToMenu"

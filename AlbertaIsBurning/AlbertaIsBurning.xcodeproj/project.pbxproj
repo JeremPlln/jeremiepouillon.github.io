@@ -7,14 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C90F73DF1D12320E00A2A44B /* fumeeEst.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C90F73DE1D12320E00A2A44B /* fumeeEst.atlas */; };
-		C90F73E11D12322000A2A44B /* fumeeNord.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C90F73E01D12322000A2A44B /* fumeeNord.atlas */; };
-		C90F73E31D12322800A2A44B /* fumeeNordEst.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C90F73E21D12322800A2A44B /* fumeeNordEst.atlas */; };
-		C90F73E51D12323000A2A44B /* fumeeNordOuest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C90F73E41D12323000A2A44B /* fumeeNordOuest.atlas */; };
-		C90F73E71D12323700A2A44B /* fumeeOuest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C90F73E61D12323700A2A44B /* fumeeOuest.atlas */; };
-		C90F73E91D12323E00A2A44B /* fumeeSud.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C90F73E81D12323E00A2A44B /* fumeeSud.atlas */; };
-		C90F73EB1D12324400A2A44B /* fumeeSudEst.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C90F73EA1D12324400A2A44B /* fumeeSudEst.atlas */; };
-		C90F73ED1D12324C00A2A44B /* fumeeSudOuest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C90F73EC1D12324C00A2A44B /* fumeeSudOuest.atlas */; };
 		C90F73F11D1337EE00A2A44B /* camionpompier.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C90F73EE1D1337EE00A2A44B /* camionpompier.mp3 */; };
 		C90F73F21D1337EE00A2A44B /* canadaire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C90F73EF1D1337EE00A2A44B /* canadaire.mp3 */; };
 		C90F73F31D1337EE00A2A44B /* eclair.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C90F73F01D1337EE00A2A44B /* eclair.mp3 */; };
@@ -30,14 +22,18 @@
 		C93539811CEC31D900A56640 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C935397F1CEC31D900A56640 /* LaunchScreen.storyboard */; };
 		C935398C1CEC31D900A56640 /* AlbertaIsBurningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C935398B1CEC31D900A56640 /* AlbertaIsBurningTests.swift */; };
 		C93539971CEC31D900A56640 /* AlbertaIsBurningUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93539961CEC31D900A56640 /* AlbertaIsBurningUITests.swift */; };
-		C93539A51CEC320600A56640 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93539A41CEC320600A56640 /* Constants.swift */; };
+		C93539A51CEC320600A56640 /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93539A41CEC320600A56640 /* Variables.swift */; };
 		C93539A71CEC321300A56640 /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C93539A61CEC321300A56640 /* sprites.atlas */; };
-		C93539AB1CEE34D000A56640 /* Coordonnees.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93539AA1CEE34D000A56640 /* Coordonnees.swift */; };
 		C96903B81CF4E53600F6616D /* ALRadialMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96903B71CF4E53600F6616D /* ALRadialMenu.swift */; };
 		C96903BA1CF4E54800F6616D /* ALRadialMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96903B91CF4E54800F6616D /* ALRadialMenuButton.swift */; };
+		C985AF831D3E5CA4003F2AAE /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C985AF821D3E5CA4003F2AAE /* AudioPlayer.swift */; };
+		C985AF8B1D3E9157003F2AAE /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C985AF8A1D3E9157003F2AAE /* Timer.swift */; };
+		C985AF8D1D3E9F36003F2AAE /* TypeTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C985AF8C1D3E9F36003F2AAE /* TypeTimer.swift */; };
+		C985AF8F1D3E9F64003F2AAE /* TypeJeu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C985AF8E1D3E9F64003F2AAE /* TypeJeu.swift */; };
+		C985AF911D3E9F74003F2AAE /* Vent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C985AF901D3E9F74003F2AAE /* Vent.swift */; };
+		C985AF931D3E9F91003F2AAE /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C985AF921D3E9F91003F2AAE /* Tile.swift */; };
 		C99081981D09D2B4007379EB /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99081971D09D2B4007379EB /* MenuScene.swift */; };
 		C990819A1D09EC70007379EB /* LevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99081991D09EC70007379EB /* LevelScene.swift */; };
-		C990819C1D09F22E007379EB /* ScoreScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C990819B1D09F22E007379EB /* ScoreScene.swift */; };
 		C990819E1D0AF2A4007379EB /* TutorialScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C990819D1D0AF2A4007379EB /* TutorialScene.swift */; };
 		C99081A01D0B036F007379EB /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C990819F1D0B036F007379EB /* GameOverScene.swift */; };
 		C99081A21D0B037C007379EB /* WinnerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99081A11D0B037C007379EB /* WinnerScene.swift */; };
@@ -65,14 +61,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C90F73DE1D12320E00A2A44B /* fumeeEst.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = fumeeEst.atlas; sourceTree = "<group>"; };
-		C90F73E01D12322000A2A44B /* fumeeNord.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = fumeeNord.atlas; sourceTree = "<group>"; };
-		C90F73E21D12322800A2A44B /* fumeeNordEst.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = fumeeNordEst.atlas; sourceTree = "<group>"; };
-		C90F73E41D12323000A2A44B /* fumeeNordOuest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = fumeeNordOuest.atlas; sourceTree = "<group>"; };
-		C90F73E61D12323700A2A44B /* fumeeOuest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = fumeeOuest.atlas; sourceTree = "<group>"; };
-		C90F73E81D12323E00A2A44B /* fumeeSud.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = fumeeSud.atlas; sourceTree = "<group>"; };
-		C90F73EA1D12324400A2A44B /* fumeeSudEst.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = fumeeSudEst.atlas; sourceTree = "<group>"; };
-		C90F73EC1D12324C00A2A44B /* fumeeSudOuest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = fumeeSudOuest.atlas; sourceTree = "<group>"; };
 		C90F73EE1D1337EE00A2A44B /* camionpompier.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = camionpompier.mp3; sourceTree = "<group>"; };
 		C90F73EF1D1337EE00A2A44B /* canadaire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = canadaire.mp3; sourceTree = "<group>"; };
 		C90F73F01D1337EE00A2A44B /* eclair.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = eclair.mp3; sourceTree = "<group>"; };
@@ -94,14 +82,18 @@
 		C93539921CEC31D900A56640 /* AlbertaIsBurningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlbertaIsBurningUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93539961CEC31D900A56640 /* AlbertaIsBurningUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbertaIsBurningUITests.swift; sourceTree = "<group>"; };
 		C93539981CEC31D900A56640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C93539A41CEC320600A56640 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C93539A41CEC320600A56640 /* Variables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
 		C93539A61CEC321300A56640 /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
-		C93539AA1CEE34D000A56640 /* Coordonnees.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordonnees.swift; sourceTree = "<group>"; };
 		C96903B71CF4E53600F6616D /* ALRadialMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALRadialMenu.swift; sourceTree = "<group>"; };
 		C96903B91CF4E54800F6616D /* ALRadialMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALRadialMenuButton.swift; sourceTree = "<group>"; };
+		C985AF821D3E5CA4003F2AAE /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		C985AF8A1D3E9157003F2AAE /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		C985AF8C1D3E9F36003F2AAE /* TypeTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeTimer.swift; sourceTree = "<group>"; };
+		C985AF8E1D3E9F64003F2AAE /* TypeJeu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeJeu.swift; sourceTree = "<group>"; };
+		C985AF901D3E9F74003F2AAE /* Vent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vent.swift; sourceTree = "<group>"; };
+		C985AF921D3E9F91003F2AAE /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		C99081971D09D2B4007379EB /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		C99081991D09EC70007379EB /* LevelScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelScene.swift; sourceTree = "<group>"; };
-		C990819B1D09F22E007379EB /* ScoreScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreScene.swift; sourceTree = "<group>"; };
 		C990819D1D0AF2A4007379EB /* TutorialScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialScene.swift; sourceTree = "<group>"; };
 		C990819F1D0B036F007379EB /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		C99081A11D0B037C007379EB /* WinnerScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinnerScene.swift; sourceTree = "<group>"; };
@@ -161,32 +153,24 @@
 		C93539711CEC31D900A56640 /* AlbertaIsBurning */ = {
 			isa = PBXGroup;
 			children = (
-				C90F73F61D13BB6C00A2A44B /* 1.mp3 */,
-				C90F73F71D13BB6C00A2A44B /* 2.mp3 */,
-				C90F73F81D13BB6C00A2A44B /* 3.mp3 */,
-				C90F73EE1D1337EE00A2A44B /* camionpompier.mp3 */,
-				C90F73EF1D1337EE00A2A44B /* canadaire.mp3 */,
-				C90F73F01D1337EE00A2A44B /* eclair.mp3 */,
-				C90F73EC1D12324C00A2A44B /* fumeeSudOuest.atlas */,
-				C90F73EA1D12324400A2A44B /* fumeeSudEst.atlas */,
-				C90F73E81D12323E00A2A44B /* fumeeSud.atlas */,
-				C90F73E61D12323700A2A44B /* fumeeOuest.atlas */,
-				C90F73E41D12323000A2A44B /* fumeeNordOuest.atlas */,
-				C90F73E21D12322800A2A44B /* fumeeNordEst.atlas */,
-				C90F73E01D12322000A2A44B /* fumeeNord.atlas */,
-				C90F73DE1D12320E00A2A44B /* fumeeEst.atlas */,
+				C985AF801D3E1ACF003F2AAE /* Sound */,
+				C99081A31D0C6F88007379EB /* Scenes */,
+				C96903BB1CF4E54D00F6616D /* ALRadialMenu */,
 				C99081CA1D10E845007379EB /* fire.atlas */,
 				C93539A61CEC321300A56640 /* sprites.atlas */,
 				C93539721CEC31D900A56640 /* AppDelegate.swift */,
 				C93539741CEC31D900A56640 /* GameScene.sks */,
 				C93539761CEC31D900A56640 /* GameScene.swift */,
+				C985AF821D3E5CA4003F2AAE /* AudioPlayer.swift */,
+				C985AF8A1D3E9157003F2AAE /* Timer.swift */,
+				C985AF8C1D3E9F36003F2AAE /* TypeTimer.swift */,
+				C985AF8E1D3E9F64003F2AAE /* TypeJeu.swift */,
+				C985AF901D3E9F74003F2AAE /* Vent.swift */,
+				C985AF921D3E9F91003F2AAE /* Tile.swift */,
 				C99081C61D0E2CDA007379EB /* PlateauDeJeu.swift */,
 				C99081C41D0E2AD7007379EB /* Case.swift */,
 				C93539781CEC31D900A56640 /* GameViewController.swift */,
-				C93539A41CEC320600A56640 /* Constants.swift */,
-				C93539AA1CEE34D000A56640 /* Coordonnees.swift */,
-				C96903BB1CF4E54D00F6616D /* ALRadialMenu */,
-				C99081A31D0C6F88007379EB /* Scenes */,
+				C93539A41CEC320600A56640 /* Variables.swift */,
 				C935397A1CEC31D900A56640 /* Main.storyboard */,
 				C935397D1CEC31D900A56640 /* Assets.xcassets */,
 				C935397F1CEC31D900A56640 /* LaunchScreen.storyboard */,
@@ -222,12 +206,24 @@
 			name = ALRadialMenu;
 			sourceTree = "<group>";
 		};
+		C985AF801D3E1ACF003F2AAE /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				C90F73F61D13BB6C00A2A44B /* 1.mp3 */,
+				C90F73F71D13BB6C00A2A44B /* 2.mp3 */,
+				C90F73F81D13BB6C00A2A44B /* 3.mp3 */,
+				C90F73EE1D1337EE00A2A44B /* camionpompier.mp3 */,
+				C90F73EF1D1337EE00A2A44B /* canadaire.mp3 */,
+				C90F73F01D1337EE00A2A44B /* eclair.mp3 */,
+			);
+			name = Sound;
+			sourceTree = "<group>";
+		};
 		C99081A31D0C6F88007379EB /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				C990819D1D0AF2A4007379EB /* TutorialScene.swift */,
 				C99081971D09D2B4007379EB /* MenuScene.swift */,
-				C990819B1D09F22E007379EB /* ScoreScene.swift */,
 				C990819F1D0B036F007379EB /* GameOverScene.swift */,
 				C99081A11D0B037C007379EB /* WinnerScene.swift */,
 				C99081991D09EC70007379EB /* LevelScene.swift */,
@@ -345,23 +341,15 @@
 				C90F73F91D13BB6C00A2A44B /* 1.mp3 in Resources */,
 				C93539A71CEC321300A56640 /* sprites.atlas in Resources */,
 				C93539751CEC31D900A56640 /* GameScene.sks in Resources */,
-				C90F73ED1D12324C00A2A44B /* fumeeSudOuest.atlas in Resources */,
 				C90F73FA1D13BB6C00A2A44B /* 2.mp3 in Resources */,
 				C90F73F21D1337EE00A2A44B /* canadaire.mp3 in Resources */,
-				C90F73E51D12323000A2A44B /* fumeeNordOuest.atlas in Resources */,
 				C93539811CEC31D900A56640 /* LaunchScreen.storyboard in Resources */,
-				C90F73E31D12322800A2A44B /* fumeeNordEst.atlas in Resources */,
-				C90F73EB1D12324400A2A44B /* fumeeSudEst.atlas in Resources */,
 				C90F73FB1D13BB6C00A2A44B /* 3.mp3 in Resources */,
-				C90F73DF1D12320E00A2A44B /* fumeeEst.atlas in Resources */,
 				C99081CB1D10E845007379EB /* fire.atlas in Resources */,
 				C935397E1CEC31D900A56640 /* Assets.xcassets in Resources */,
 				C90F73F31D1337EE00A2A44B /* eclair.mp3 in Resources */,
 				C935397C1CEC31D900A56640 /* Main.storyboard in Resources */,
 				C90F73F11D1337EE00A2A44B /* camionpompier.mp3 in Resources */,
-				C90F73E71D12323700A2A44B /* fumeeOuest.atlas in Resources */,
-				C90F73E11D12322000A2A44B /* fumeeNord.atlas in Resources */,
-				C90F73E91D12323E00A2A44B /* fumeeSud.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,19 +376,23 @@
 			files = (
 				C93539771CEC31D900A56640 /* GameScene.swift in Sources */,
 				C93539791CEC31D900A56640 /* GameViewController.swift in Sources */,
+				C985AF831D3E5CA4003F2AAE /* AudioPlayer.swift in Sources */,
 				C96903BA1CF4E54800F6616D /* ALRadialMenuButton.swift in Sources */,
 				C990819E1D0AF2A4007379EB /* TutorialScene.swift in Sources */,
 				C96903B81CF4E53600F6616D /* ALRadialMenu.swift in Sources */,
 				C99081C51D0E2AD7007379EB /* Case.swift in Sources */,
+				C985AF931D3E9F91003F2AAE /* Tile.swift in Sources */,
+				C985AF8B1D3E9157003F2AAE /* Timer.swift in Sources */,
 				C99081A21D0B037C007379EB /* WinnerScene.swift in Sources */,
 				C93539731CEC31D900A56640 /* AppDelegate.swift in Sources */,
 				C99081981D09D2B4007379EB /* MenuScene.swift in Sources */,
+				C985AF911D3E9F74003F2AAE /* Vent.swift in Sources */,
 				C990819A1D09EC70007379EB /* LevelScene.swift in Sources */,
 				C99081C71D0E2CDA007379EB /* PlateauDeJeu.swift in Sources */,
-				C93539A51CEC320600A56640 /* Constants.swift in Sources */,
-				C93539AB1CEE34D000A56640 /* Coordonnees.swift in Sources */,
+				C93539A51CEC320600A56640 /* Variables.swift in Sources */,
+				C985AF8F1D3E9F64003F2AAE /* TypeJeu.swift in Sources */,
+				C985AF8D1D3E9F36003F2AAE /* TypeTimer.swift in Sources */,
 				C99081A01D0B036F007379EB /* GameOverScene.swift in Sources */,
-				C990819C1D09F22E007379EB /* ScoreScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

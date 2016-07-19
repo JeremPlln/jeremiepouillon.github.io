@@ -12,11 +12,6 @@ import UIKit
 
 class LevelScene: SKScene {
     
-    //    let cigaretteMode = UIButton()
-    //    let criminelMode = UIButton()
-    //    let foudreMode = UIButton()
-    //    let tutorialMode = UIButton()
-    
     override func didMoveToView(view: SKView) {
         
         let background = SKSpriteNode(imageNamed: "FondEcran2.png")
@@ -26,7 +21,6 @@ class LevelScene: SKScene {
         self.addChild(background)
         
         addButtons()
-        
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -34,67 +28,40 @@ class LevelScene: SKScene {
         let location = touch.first!.locationInNode(self)
         let node = self.nodeAtPoint(location)
         
-        var secondScene = GameScene(size: self.size, typeJeu: 1)
-        var goToTutoriel = TutorialScene()
-        
-        switch node.name {
-        case "BoutonModeCigarette"? :
-            secondScene = GameScene(size: self.size, typeJeu: 1)
-        case "BoutonModeFoudre"? :
-            secondScene = GameScene(size: self.size, typeJeu: 2)
-        case "BoutonModeCriminel"? :
-            secondScene = GameScene(size: self.size, typeJeu: 3)
-        default:
-            goToTutoriel = TutorialScene(size: self.size)
-        }
-        if(node.name == "BoutonModeCigarette" || node.name == "BoutonModeFoudre" || node.name == "BoutonModeCriminel"){
+        let scene: SKScene
+        if let nodeName = node.name, let typeJeu = TypeJeu.typeJeuForNode(nodeName) {
             gameIsRunning = true
-            let transition = SKTransition.fadeWithDuration(1.0)
-            secondScene.scaleMode = SKSceneScaleMode.AspectFill
-            self.scene!.view!.presentScene(secondScene, transition: transition)
+            
+            scene = GameScene(size: self.size, typeJeu: typeJeu)
         }
-        else{
-            let transition = SKTransition.fadeWithDuration(1.0)
-            goToTutoriel.scaleMode = SKSceneScaleMode.AspectFill
-            self.scene!.view!.presentScene(goToTutoriel, transition: transition)
+        else {
+            scene = TutorialScene(size: self.size)
+            
         }
+        
+        let duration = 1.0
+        let transition = SKTransition.fadeWithDuration(duration)
+        scene.scaleMode = SKSceneScaleMode.AspectFill
+        self.scene!.view!.presentScene(scene, transition: transition)
+        
+
     }
     
     private func addButtons() {
         // TODO layout buttons here
-        let Titre = SKSpriteNode(imageNamed: "nomJeu.png")
-        Titre.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) + (view?.bounds.height)!/2.5)
-        Titre.zPosition = 2
-        self.addChild(Titre)
+        func Button(nameFile: String, nameNode: String?, offset: CGFloat, size: Bool = true){
+            let button = SKSpriteNode(imageNamed: nameFile)
+            button.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) + offset)
+            button.name = nameNode
+            button.zPosition = 2
+            if size {button.size = CGSize(width: 100.0, height: 50.0)}
+            self.addChild(button)
+        }
         
-        let bouttonModeCigarette = SKSpriteNode(imageNamed: "BouttonCigaretteMode.png")
-        bouttonModeCigarette.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
-        bouttonModeCigarette.name = "BoutonModeCigarette"
-        bouttonModeCigarette.zPosition = 2
-        bouttonModeCigarette.size = CGSize(width: 100, height: 50)
-        self.addChild(bouttonModeCigarette)
-        
-        let bouttonModeTutoriel = SKSpriteNode(imageNamed: "BouttonTutoriel.png")
-        bouttonModeTutoriel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)+55)
-        bouttonModeTutoriel.name = "BoutonModeTutoriel"
-        bouttonModeTutoriel.zPosition = 2
-        bouttonModeTutoriel.size = CGSize(width: 100, height: 50)
-        self.addChild(bouttonModeTutoriel)
-        
-        let bouttonModeFoudre = SKSpriteNode(imageNamed: "BouttonFoudre.png")
-        bouttonModeFoudre.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) - 55)
-        bouttonModeFoudre.name = "BoutonModeFoudre"
-        bouttonModeFoudre.zPosition = 2
-        bouttonModeFoudre.size = CGSize(width: 100, height: 50)
-        self.addChild(bouttonModeFoudre)
-        
-        let bouttonModeCriminel = SKSpriteNode(imageNamed: "BouttonCriminel.png")
-        bouttonModeCriminel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) - 110)
-        bouttonModeCriminel.name = "BoutonModeCriminel"
-        bouttonModeCriminel.zPosition = 2
-        bouttonModeCriminel.size = CGSize(width: 100, height: 50)
-        self.addChild(bouttonModeCriminel)
+        Button("nomJeu.png", nameNode: nil, offset: (view?.bounds.height)!/2.5, size: false)
+        Button("BouttonTutoriel.png", nameNode: "BoutonModeTutoriel", offset: 55)
+        Button("BouttonCigaretteMode.png", nameNode: "BoutonModeCigarette", offset: 0)
+        Button("BouttonFoudre.png", nameNode: "BoutonModeFoudre", offset: -55)
+        Button("BouttonCriminel.png",nameNode: "BoutonModeCriminel", offset: -110)
     }
-    
-    
 }

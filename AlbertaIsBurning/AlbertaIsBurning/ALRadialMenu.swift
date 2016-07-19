@@ -14,16 +14,14 @@ private typealias ALAnimationsClosure = () -> Void
 
 struct Angle {
     var degrees: Double
-    
-    
     func radians() -> Double {
         return degrees * (M_PI/180)
     }
 }
 
 public class ALRadialMenu: UIButton {
+
     // MARK: Public API
-    
     var selectedIndex = Int()
     var myView = UIView()
     var audioPlayerPompier = AVAudioPlayer()
@@ -245,7 +243,6 @@ public class ALRadialMenu: UIButton {
                             
                             do{
                                 try audioPlayerCanadaire = AVAudioPlayer(contentsOfURL: myFilePathURL)
-                                //audioPlayerCanadaire.prepareToPlay()
                                 audioPlayerCanadaire.play()
                             }catch
                             {
@@ -266,7 +263,6 @@ public class ALRadialMenu: UIButton {
                             
                             do{
                                 try audioPlayerCanadaire = AVAudioPlayer(contentsOfURL: myFilePathURL)
-                                //audioPlayerCanadaire.prepareToPlay()
                                 audioPlayerCanadaire.volume = 1.0
                                 audioPlayerCanadaire.play()
                             }catch
@@ -278,15 +274,12 @@ public class ALRadialMenu: UIButton {
                 }
                 else{
                     placePompier(i)
-                    //let coinSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("camionpompier", ofType: "wav")!)
-                    
                     let pompierSound = NSBundle.mainBundle().pathForResource("camionpompier", ofType: "mp3")
                     if let pompierSound = pompierSound {
                         let myFilePathURL = NSURL(fileURLWithPath: pompierSound)
                         
                         do{
                             try audioPlayerPompier = AVAudioPlayer(contentsOfURL: myFilePathURL)
-                            //audioPlayerPompier.prepareToPlay()
                             audioPlayerPompier.volume = 1.0
                             audioPlayerPompier.play()
                         }catch
@@ -438,7 +431,6 @@ public class ALRadialMenu: UIButton {
         let x = origin.x + CGFloat(radius) * CGFloat(cos(radians))
         let y = origin.y + CGFloat(radius) * CGFloat(sin(radians))
         return CGPointMake(x, y)
-        
     }
     
     private func calculateSpacing() -> Angle {
@@ -536,7 +528,7 @@ public class ALRadialMenu: UIButton {
         ALRadialMenu(view: myView)
             .setButtons(generateButtonsCanadaire())
             .setDelay(0.05)
-            .setAnimationOrigin(CGPoint(x: abscisse, y: ordonnee))
+            .setAnimationOrigin(animationOrigin)
             .presentInView(myView)
     }
     
@@ -544,8 +536,33 @@ public class ALRadialMenu: UIButton {
         ALRadialMenu(view: myView)
             .setButtons(generateButtonsRetardant())
             .setDelay(0.05)
-            .setAnimationOrigin(CGPoint(x: abscisse, y: ordonnee))
+            .setAnimationOrigin(animationOrigin)
             .presentInView(myView)
     }
+    
+    ///////// FONCTIONS POUR LE MENU CIRCULAIRE LORSQUE LE JOUEUR TOUCHE UNE CASE ///////
+    static func generateButtons() -> [ALRadialMenuButton] {
+        var buttons = [ALRadialMenuButton]()
+        
+        for i in 0..<3 {
+            let button = ALRadialMenuButton(frame: CGRectMake(0, 0, 30, 30))
+            button.setImage(UIImage(named: "icon\(i+1)"), forState: UIControlState.Normal)
+            buttons.append(button)
+        }
+        buttons[1].accessibilityIdentifier = "Canadaire"
+        buttons[2].accessibilityIdentifier = "Retardant"
+        return buttons
+    }
+    
+    static func showMenu(sender: UITapGestureRecognizer) {
+        if let v = sender.view {
+            ALRadialMenu(view: v)
+                .setButtons(generateButtons())
+                .setDelay(0.05)
+                .setAnimationOrigin(sender.locationInView(v))
+                .presentInView(v)
+        }
+    }
+
     
 }

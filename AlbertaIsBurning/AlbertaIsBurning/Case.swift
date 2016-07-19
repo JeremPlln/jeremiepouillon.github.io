@@ -10,12 +10,11 @@ import Foundation
 
 class Case {
     
-    var id: Int
-    var ligne = Int()
-    var colonne = Int()
-    var estEnFeu = Bool()
-    var imageJeu = Int()
-    
+    let id: Int
+    let ligne: Int
+    let colonne: Int
+    var estEnFeu: Bool
+    var imageJeu: Int
     
     init(id: Int, image: Int) {
         self.id = id
@@ -24,8 +23,4 @@ class Case {
         self.colonne = Int(id%nombreColonne)
         self.estEnFeu = false
     }
-    
-    
-    
-    
 }

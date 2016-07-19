@@ -11,6 +11,7 @@ import SpriteKit
 
 class PlateauDeJeu {
     
+    /* Notre plateau de jeu, chaque numéro correspond à une image */
     let tiles = [
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
         [1, 2, 2, 9, 2, 11, 2, 10, 2, 9, 2, 2, 9, 10, 9, 2, 2, 9, 10, 2, 11, 1],
@@ -24,21 +25,21 @@ class PlateauDeJeu {
         [1, 11, 2, 10, 9, 2, 9, 2, 3, 12, 13, 13, 15, 2, 11, 3, 2, 10, 15, 16, 3, 1],
         [1, 2, 9, 11, 2, 2, 2, 11, 14, 16, 16, 15, 3, 2, 2, 11, 2, 14, 13, 12, 12, 1],
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]
+    
+    /* les variables */
     var caseFire : [Int] = []
     var tempPositionCaseFire = [CGPoint]()
     var value : Int = 0
     var choixCase: Int = 0
     var coordonnees = [CGPoint]()
     var TableauFeu = [Case]()
-    var orientationVent: Int = Int()
     var COORD: [CGPoint] = []
     var departDeFeu = [Int]()
-    var typePartie = Int()
     
     init(){
         for i in 1..<tiles.count-1 { //on démarre à 1 car la 1ere valeur ne fait pas partie de la map
             let row = tiles[i]
-            for j in 1..<row.count-1 { //on démarre à 1 et termine à count-1 car la 1ere et la derniere
+            for j in 1..<row.count-1 {
                 caseFire.append(value)
                 TableauFeu.append(Case(id: value,image: tiles[i][j]))
                 coordonnees.append(CGPoint(x: i-1, y: j-1))
@@ -64,77 +65,82 @@ class PlateauDeJeu {
         return coordonnees
     }
     
-    func setWind() -> Int {
-        orientationVent =  Int(arc4random_uniform(UInt32(8)))
-        return orientationVent
+    func setWind() -> Vent {
+        let vent: Vent
+        if let _vent = Vent.random() {
+            vent = _vent
+        }
+        else {
+            vent = .Est
+        }
+
+        return vent
     }
     
-    func casePossible() -> [Int]{
+    func casePossible(vent: Vent) -> [Int]{
         var maCase: Case
         var tmp = [Int]()
         var foyerPossible = [Int]()
         for i in 0..<departDeFeu.count{
             tmp.removeAll()
             maCase = TableauFeu[departDeFeu[i]]
-            switch orientationVent {
-            case 0:
+            switch vent {
+            case .Est:
                 if (maCase.colonne < nombreColonne-1){
                     tmp.append(departDeFeu[i]+1)
                     tmp.append(departDeFeu[i]+1-nombreColonne)
                     tmp.append(departDeFeu[i]+1+nombreColonne)
                 }
                 break
-            case 1:
+            case .SudEst:
                 if (maCase.colonne < nombreColonne-1){
                     tmp.append(departDeFeu[i]+1)
                     tmp.append(departDeFeu[i]+1+nombreColonne)
                 }
                 tmp.append(departDeFeu[i]+nombreColonne)
                 break
-            case 2:
+            case .Sud:
                 tmp.append(departDeFeu[i]-1+nombreColonne)
                 tmp.append(departDeFeu[i]+nombreColonne)
                 tmp.append(departDeFeu[i]+1+nombreColonne)
                 break
-            case 3:
+            case .SudOuest:
                 if (maCase.colonne > 0){
                     tmp.append(departDeFeu[i]-1)
                     tmp.append(departDeFeu[i]-1+nombreColonne)
                 }
                 tmp.append(departDeFeu[i]+nombreColonne)
                 break
-            case 4:
+            case .Ouest:
                 if (maCase.colonne > 0){
                     tmp.append(departDeFeu[i]-1)
                     tmp.append(departDeFeu[i]-1-nombreColonne)
                     tmp.append(departDeFeu[i]-1+nombreColonne)
                 }
                 break
-            case 5:
+            case .NordOuest:
                 if (maCase.colonne > 0){
                     tmp.append(departDeFeu[i]-1)
                     tmp.append(departDeFeu[i]-1-nombreColonne)
                 }
                 tmp.append(departDeFeu[i]-nombreColonne)
                 break
-            case 6:
+            case .Nord:
                 tmp.append(departDeFeu[i]+1-nombreColonne)
                 tmp.append(departDeFeu[i]-1-nombreColonne)
                 tmp.append(departDeFeu[i]-nombreColonne)
                 break
-            case 7:
+            case .NordEst:
                 if (maCase.colonne < nombreColonne-1){
                     tmp.append(departDeFeu[i]+1)
                     tmp.append(departDeFeu[i]+1-nombreColonne)
                 }
                 tmp.append(departDeFeu[i]-nombreColonne)
                 break
-            default:
-                break
             }
             
             for j in 0..<tmp.count{
-                if (tmp[j] >= 0 && tmp[j] <= TableauFeu.count && TableauFeu[tmp[j]].estEnFeu == false && TableauFeu[tmp[j]].imageJeu != 6 && TableauFeu[tmp[j]].imageJeu != 8) {
+                if (tmp[j] >= 0 && tmp[j] <= TableauFeu.count && TableauFeu[tmp[j]].estEnFeu == false && TableauFeu[tmp[j]].imageJeu != 6 && TableauFeu[tmp[j]].imageJeu != 8 && !foyerPossible.contains(tmp[j])) {
                     foyerPossible.append(tmp[j])
                 }
             }
@@ -142,6 +148,3 @@ class PlateauDeJeu {
         return foyerPossible
     }
 }
-
-
-

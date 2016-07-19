@@ -9,11 +9,16 @@
 import UIKit
 import SpriteKit
 
+/////////////////CONSTANTES//////////////////
+
 let kSpriteTouchable = "touchable"    //SpriteNode qui peuvent être touchés
 let kSpriteNotTouchable = "notTouchable"  //SpriteNode qui ne peuvent pas être touchés
-let kSpriteCanadaire = "Canadaire"
 let tableauFeuCount = 200
 let tileSize = (width:32, height:32)
+let newPlateau = PlateauDeJeu()
+
+/////////////////VARIABLES//////////////////
+
 var kLIGNE = Int()
 var kCOLONNE = Int()
 var kCASE_SELECTIONNEE = Int()
@@ -24,7 +29,7 @@ var view2D = SKSpriteNode()
 var compteurUniteEau : Int = 5
 var compteurUniteEauDepart : Int = 5
 var compteurUniteVie = Int()
-let compteurUniteVieDepart: Int = 5
+let compteurUniteVieDepart: Int = 50
 var compteurUniteCanadaire: Int = 0
 var compteurUniteCanadaireDepart: Int = 0
 var compteurUniteRetardant: Int = 0
@@ -41,15 +46,6 @@ var scorePompier = Int()
 var scoreCanadaire = Int()
 var scoreRetardant = Int()
 var scoreTotal = Int()
-var abscisse = CGFloat()
-var ordonnee = CGFloat()
-let newPlateau = PlateauDeJeu()
 var pompierUse: Int = 0
 var canadaireUse: Int = 0
 var retardantUse: Int = 0
-
-
-
-
-
-
