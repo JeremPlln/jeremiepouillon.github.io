@@ -326,21 +326,15 @@ class GameScene: SKScene {
     func stop(){
         isGameOver = false
         gameIsRunning = false
-        
         newPlateau.departDeFeu.removeAll()
-        
         timer.stop()
-        
         for view in views {
             view.removeFromSuperview()
         }
-        
         views.removeAll()
-
         if (typePartie == .Foudre) {
             audioPlayerEclair?.stop()
         }
-        
         view?.removeGestureRecognizer(toucheCase)
     }
     

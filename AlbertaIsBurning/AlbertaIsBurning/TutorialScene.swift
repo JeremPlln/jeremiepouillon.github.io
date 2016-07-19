@@ -27,11 +27,8 @@ class TutorialScene: SKScene {
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if (derniereImage == true) {
-            tutoriel.removeFromSuperview()
-            tutoriel.image = UIImage(named: "tutoriel5")
-            tutoriel.frame = CGRect(x: 0, y: 0, width: (self.view?.bounds.width)!, height: (self.view?.bounds.height)!)
-            view?.addSubview(tutoriel)
-    
+            initTutoriel("tutoriel5")
+            
             let secondScene = LevelScene(size: self.size)
             let transition = SKTransition.fadeWithDuration(1.0)
             secondScene.scaleMode = SKSceneScaleMode.AspectFill
@@ -41,27 +38,25 @@ class TutorialScene: SKScene {
         }
         else if (deuxiemeImage == true){
             troisiemeImage = true
-            tutoriel.removeFromSuperview()
-            tutoriel.image = UIImage(named: "tutoriel2")
-            tutoriel.frame = CGRect(x: 0, y: 0, width: (self.view?.bounds.width)!, height: (self.view?.bounds.height)!)
-            view?.addSubview(tutoriel)
+            initTutoriel("tutoriel2")
             deuxiemeImage = false
         }
         else if (troisiemeImage == true){
             quatriemeImage = true
-            tutoriel.removeFromSuperview()
-            tutoriel.image = UIImage(named: "tutoriel3")
-            tutoriel.frame = CGRect(x: 0, y: 0, width: (self.view?.bounds.width)!, height: (self.view?.bounds.height)!)
-            view?.addSubview(tutoriel)
+            initTutoriel("tutoriel5")
             troisiemeImage = false
         }
         else if (quatriemeImage == true){
             derniereImage = true
-            tutoriel.removeFromSuperview()
-            tutoriel.image = UIImage(named: "tutoriel4")
-            tutoriel.frame = CGRect(x: 0, y: 0, width: (self.view?.bounds.width)!, height: (self.view?.bounds.height)!)
-            view?.addSubview(tutoriel)
+            initTutoriel("tutoriel4")
             quatriemeImage = false
         }
+    }
+    
+    func initTutoriel(fileName: String){
+        tutoriel.removeFromSuperview()
+        tutoriel.image = UIImage(named: fileName)
+        tutoriel.frame = CGRect(x: 0, y: 0, width: (self.view?.bounds.width)!, height: (self.view?.bounds.height)!)
+        view?.addSubview(tutoriel)
     }
 }
