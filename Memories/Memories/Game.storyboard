@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aMk-tK-LU4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="qVX-i6-UmP">
+            <objects>
+                <viewController id="aMk-tK-LU4" customClass="GameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FD8-UI-kUv"/>
+                        <viewControllerLayoutGuide type="bottom" id="fxM-sQ-oFN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="txX-zJ-WpW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4M-cL-xUd">
+                                <rect key="frame" x="36" y="50" width="303" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wQ0-v8-9bc" customClass="CircleView" customModule="Memories" customModuleProvider="target">
+                                <rect key="frame" x="36" y="171" width="303" height="303"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="303" id="Vb4-Ds-gys"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="V4M-cL-xUd" firstAttribute="top" secondItem="FD8-UI-kUv" secondAttribute="bottom" constant="30" id="1C7-dx-cV1"/>
+                            <constraint firstItem="V4M-cL-xUd" firstAttribute="leading" secondItem="txX-zJ-WpW" secondAttribute="leadingMargin" constant="20" id="61b-1g-iGQ"/>
+                            <constraint firstItem="wQ0-v8-9bc" firstAttribute="leading" secondItem="txX-zJ-WpW" secondAttribute="leadingMargin" constant="20" id="98n-gP-8dI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="V4M-cL-xUd" secondAttribute="trailing" constant="20" id="9Dk-fr-IYQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wQ0-v8-9bc" secondAttribute="trailing" constant="20" id="R5Q-O1-pcL"/>
+                            <constraint firstItem="wQ0-v8-9bc" firstAttribute="top" secondItem="V4M-cL-xUd" secondAttribute="bottom" constant="100" id="jJr-Jl-nuH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="circleView" destination="wQ0-v8-9bc" id="e7s-WO-RMW"/>
+                        <outlet property="scoreLabel" destination="V4M-cL-xUd" id="ick-Ij-xyY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BKV-1Z-pSa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96.799999999999997" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
