@@ -6,4 +6,13 @@
 //  Copyright © 2017 Jérémie Pouillon. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class GameViewController: UIViewController {
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var circleView: CircleView!
+    
+    
+    
+    
+}

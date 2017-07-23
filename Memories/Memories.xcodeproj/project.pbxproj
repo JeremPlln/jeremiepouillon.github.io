@@ -10,12 +10,17 @@
 		234901726A16BA72DCD9BC83 /* Pods_MemoriesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C7D3B84621B06169DD8E6B /* Pods_MemoriesUITests.framework */; };
 		79CF8A1025B3698981FE9050 /* Pods_MemoriesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4026A46AA98DBB15D41F51B8 /* Pods_MemoriesTests.framework */; };
 		A0675FB01F24B3DF007AB780 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0675FAF1F24B3DF007AB780 /* AppDelegate.swift */; };
-		A0675FB21F24B3DF007AB780 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0675FB11F24B3DF007AB780 /* ViewController.swift */; };
-		A0675FB51F24B3DF007AB780 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0675FB31F24B3DF007AB780 /* Main.storyboard */; };
 		A0675FB71F24B3DF007AB780 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0675FB61F24B3DF007AB780 /* Assets.xcassets */; };
 		A0675FBA1F24B3DF007AB780 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0675FB81F24B3DF007AB780 /* LaunchScreen.storyboard */; };
 		A0675FC51F24B3DF007AB780 /* MemoriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0675FC41F24B3DF007AB780 /* MemoriesTests.swift */; };
 		A0675FD01F24B3DF007AB780 /* MemoriesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0675FCF1F24B3DF007AB780 /* MemoriesUITests.swift */; };
+		A0675FDF1F24B4D3007AB780 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0675FDE1F24B4D3007AB780 /* Player.swift */; };
+		A0675FE21F24B500007AB780 /* BoardGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0675FE11F24B500007AB780 /* BoardGame.swift */; };
+		A0675FE61F24B5E3007AB780 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0675FE51F24B5E3007AB780 /* GameManager.swift */; };
+		A0675FF01F24B8CA007AB780 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0675FEF1F24B8CA007AB780 /* CircleView.swift */; };
+		A0675FF21F24BBDF007AB780 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0675FF11F24BBDF007AB780 /* Game.storyboard */; };
+		A0675FF41F24BBEF007AB780 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0675FF31F24BBEF007AB780 /* GameViewController.swift */; };
+		A0675FF61F24E31C007AB780 /* CirclePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0675FF51F24E31C007AB780 /* CirclePresenter.swift */; };
 		A6588E4E7AE419B18C8974FC /* Pods_Memories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3088ED92AB03FA45A58940 /* Pods_Memories.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,8 +51,6 @@
 		99E3C5A7398C69ED9B0B5D41 /* Pods-MemoriesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoriesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MemoriesTests/Pods-MemoriesTests.release.xcconfig"; sourceTree = "<group>"; };
 		A0675FAC1F24B3DF007AB780 /* Memories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0675FAF1F24B3DF007AB780 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A0675FB11F24B3DF007AB780 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A0675FB41F24B3DF007AB780 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0675FB61F24B3DF007AB780 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0675FB91F24B3DF007AB780 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0675FBB1F24B3DF007AB780 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +60,13 @@
 		A0675FCB1F24B3DF007AB780 /* MemoriesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoriesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0675FCF1F24B3DF007AB780 /* MemoriesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesUITests.swift; sourceTree = "<group>"; };
 		A0675FD11F24B3DF007AB780 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0675FDE1F24B4D3007AB780 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = Model/Player.swift; sourceTree = "<group>"; };
+		A0675FE11F24B500007AB780 /* BoardGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardGame.swift; sourceTree = "<group>"; };
+		A0675FE51F24B5E3007AB780 /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameManager.swift; path = Manager/GameManager.swift; sourceTree = "<group>"; };
+		A0675FEF1F24B8CA007AB780 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleView.swift; path = View/CircleView.swift; sourceTree = "<group>"; };
+		A0675FF11F24BBDF007AB780 /* Game.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
+		A0675FF31F24BBEF007AB780 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		A0675FF51F24E31C007AB780 /* CirclePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirclePresenter.swift; sourceTree = "<group>"; };
 		DD9E8C945AE22166DD70C9A9 /* Pods-Memories.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memories.release.xcconfig"; path = "Pods/Target Support Files/Pods-Memories/Pods-Memories.release.xcconfig"; sourceTree = "<group>"; };
 		EC3088ED92AB03FA45A58940 /* Pods_Memories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Memories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -125,11 +135,14 @@
 			isa = PBXGroup;
 			children = (
 				A0675FAF1F24B3DF007AB780 /* AppDelegate.swift */,
-				A0675FB11F24B3DF007AB780 /* ViewController.swift */,
-				A0675FB31F24B3DF007AB780 /* Main.storyboard */,
 				A0675FB61F24B3DF007AB780 /* Assets.xcassets */,
 				A0675FB81F24B3DF007AB780 /* LaunchScreen.storyboard */,
 				A0675FBB1F24B3DF007AB780 /* Info.plist */,
+				A0675FE01F24B4D7007AB780 /* Model */,
+				A0675FE71F24B662007AB780 /* Manager */,
+				A0675FEA1F24B69C007AB780 /* View */,
+				A0675FF11F24BBDF007AB780 /* Game.storyboard */,
+				A0675FF31F24BBEF007AB780 /* GameViewController.swift */,
 			);
 			path = Memories;
 			sourceTree = "<group>";
@@ -150,6 +163,32 @@
 				A0675FD11F24B3DF007AB780 /* Info.plist */,
 			);
 			path = MemoriesUITests;
+			sourceTree = "<group>";
+		};
+		A0675FE01F24B4D7007AB780 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A0675FDE1F24B4D3007AB780 /* Player.swift */,
+				A0675FE11F24B500007AB780 /* BoardGame.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A0675FE71F24B662007AB780 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A0675FE51F24B5E3007AB780 /* GameManager.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		A0675FEA1F24B69C007AB780 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A0675FEF1F24B8CA007AB780 /* CircleView.swift */,
+				A0675FF51F24E31C007AB780 /* CirclePresenter.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		F805EFD8D13CEF5F435A7A11 /* Pods */ = {
@@ -284,9 +323,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0675FF21F24BBDF007AB780 /* Game.storyboard in Resources */,
 				A0675FBA1F24B3DF007AB780 /* LaunchScreen.storyboard in Resources */,
 				A0675FB71F24B3DF007AB780 /* Assets.xcassets in Resources */,
-				A0675FB51F24B3DF007AB780 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,7 +488,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0675FB21F24B3DF007AB780 /* ViewController.swift in Sources */,
+				A0675FF41F24BBEF007AB780 /* GameViewController.swift in Sources */,
+				A0675FF61F24E31C007AB780 /* CirclePresenter.swift in Sources */,
+				A0675FF01F24B8CA007AB780 /* CircleView.swift in Sources */,
+				A0675FE21F24B500007AB780 /* BoardGame.swift in Sources */,
+				A0675FE61F24B5E3007AB780 /* GameManager.swift in Sources */,
+				A0675FDF1F24B4D3007AB780 /* Player.swift in Sources */,
 				A0675FB01F24B3DF007AB780 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,14 +530,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A0675FB31F24B3DF007AB780 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A0675FB41F24B3DF007AB780 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A0675FB81F24B3DF007AB780 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -707,6 +743,7 @@
 				A0675FD61F24B3DF007AB780 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A0675FD71F24B3DF007AB780 /* Build configuration list for PBXNativeTarget "MemoriesTests" */ = {
 			isa = XCConfigurationList;
@@ -715,6 +752,7 @@
 				A0675FD91F24B3DF007AB780 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A0675FDA1F24B3DF007AB780 /* Build configuration list for PBXNativeTarget "MemoriesUITests" */ = {
 			isa = XCConfigurationList;
@@ -723,6 +761,7 @@
 				A0675FDC1F24B3DF007AB780 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

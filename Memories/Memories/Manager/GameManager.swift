@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+class GameManager {
+    static let shared = GameManager()
+    
+    func newGame(player: Player, boardGame: BoardGame) {
+        // TODO: implemente
+    }
+    
+    func gameOver() {
+        // TODO: implemente
+    }
+}
