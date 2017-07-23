@@ -1,0 +1,6 @@
+framework module Pods_MemoriesUITests {
+  umbrella header "Pods-MemoriesUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
